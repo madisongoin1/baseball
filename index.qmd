@@ -1,9 +1,9 @@
 
 ---
-title: "Baseball"
+title: "The History of Major League Baseball"
 ---
 
-# Welcome to Baseball
+# Exploring Baseball Through Data
 
-This website explores baseball.
+Welcome to my Baseball project! This website explores the history of Major League Baseball through data, using the Lahman database to uncover trends, examine legendary players, and discover how the game has evolved over time.
 
