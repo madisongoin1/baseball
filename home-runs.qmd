@@ -11,6 +11,23 @@ library(Lahman)
 ```
 
 ```{r}
-Teams
+#| cache: true
+hr_by_season <- Teams |>
+  group_by(yearID) |>
+  summarise(
+    total_home_runs = sum(HR, na.rm = TRUE),
+    total_team_games = sum(G, na.rm = TRUE),
+    home_runs_per_game = total_home_runs / total_team_games
+  )
+```
+
+```{r}
+ggplot(hr_by_season, aes(x = yearID, y = home_runs_per_game)) +
+  geom_line() +
+  labs(
+    title = "Home Runs per Team Game Over Time",
+    x = "Season",
+    y = "Home Runs per Game"
+  )
 ```
 
