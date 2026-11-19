@@ -1,0 +1,9 @@
+
+---
+title: "Baseball"
+---
+
+# Welcome to Baseball
+
+This website explores baseball.
+
