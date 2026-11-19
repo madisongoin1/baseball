@@ -11,12 +11,55 @@ library(Lahman)
 ```
 
 ```{r}
+
 Batting |>
   group_by(playerID) |>
   summarise(
-    career_home_runs = sum(HR, na.rm = TRUE)
+    career_home_runs = sum(HR, na.rm = TRUE),
+    first_year = min(yearID),
+    last_year = max(yearID)
   ) |>
   arrange(desc(career_home_runs)) |>
-  slice_head(n = 15)
+  slice_head(n = 15) |>
+  left_join(People, by = "playerID") |>
+  mutate(
+    player_name = paste(nameFirst, nameLast),
+    active_steroid_era = if_else(
+      last_year >= 1994 & first_year <= 2009,
+      "Yes",
+      "No"
+    )
+  ) |>
+  ggplot(aes(
+    x = career_home_runs,
+    y = fct_reorder(player_name, career_home_runs),
+    fill = active_steroid_era
+  )) +
+  geom_col() +
+  scale_fill_manual(
+    name = "Career overlapped 1994–2009",
+    values = c("Yes" = "#0072B2", "No" = "gray60")
+  ) +
+  labs(
+    title = "Top 15 Career Home Run Leaders",
+    x = "Career home runs",
+    y = "Player",
+    caption = "Source: Lahman package, Batting and People data"
+  )
+```
+
+```{r}
+#| label: fig-sluggers
+
+Batting |>
+  filter(playerID == "bondsba01") |>
+  ggplot(aes(x = yearID, y = HR)) +
+  geom_col() +
+  labs(
+    title = "Barry Bonds' Home Runs by Season",
+    x = "Season",
+    y = "Home runs"
+  )
+
 ```
 
