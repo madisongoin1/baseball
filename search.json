@@ -1,0 +1,16 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "The History of Major League Baseball",
+    "section": "",
+    "text": "Exploring Baseball Through Data\nBaseball has changed dramatically throughout its history, and data helps us understand how the game has evolved. This project uses the Lahman database to explore trends in Major League Baseball, including how home runs per game have changed across seasons and which players have hit the most home runs throughout their careers.\nUse the pages in the navigation bar to explore the history of team home runs and compare the greatest home run hitters in MLB history. Together, these analyses offer a closer look at the players, seasons, and statistics that have shaped America’s pastime."
+  },
+  {
+    "objectID": "sluggers.html",
+    "href": "sluggers.html",
+    "title": "Sluggers",
+    "section": "",
+    "text": "Figure 1"
+  }
+]
