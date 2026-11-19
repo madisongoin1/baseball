@@ -5,5 +5,7 @@ title: "The History of Major League Baseball"
 
 # Exploring Baseball Through Data
 
-Welcome to my Baseball project! This website explores the history of Major League Baseball through data, using the Lahman database to uncover trends, examine legendary players, and discover how the game has evolved over time.
+Baseball has changed dramatically throughout its history, and data helps us understand how the game has evolved. This project uses the Lahman database to explore trends in Major League Baseball, including how home runs per game have changed across seasons and which players have hit the most home runs throughout their careers.
+
+Use the pages in the navigation bar to explore the history of team home runs and compare the greatest home run hitters in MLB history. Together, these analyses offer a closer look at the players, seasons, and statistics that have shaped America's pastime.
 
